@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.application.mapper.rocketMq.TWorthBuyCategoryMapper" >
+  <resultMap id="BaseResultMap" type="com.example.application.domain.rocketMq.TWorthBuyCategory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="category_name" property="categoryName" jdbcType="VARCHAR" />
+    <result column="category_picture_id" property="categoryPictureId" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="ordery_no" property="orderyNo" jdbcType="INTEGER" />
+    <result column="category_desc" property="categoryDesc" jdbcType="VARCHAR" />
+    <result column="parent_id" property="parentId" jdbcType="BIGINT" />
+    <result column="category_level" property="categoryLevel" jdbcType="INTEGER" />
+    <result column="material_id" property="materialId" jdbcType="BIGINT" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    id, category_name, category_picture_id, status, ordery_no, category_desc, parent_id, 
+    category_level, material_id, create_user, create_time, update_user, update_time
+  </sql>
+</mapper>
