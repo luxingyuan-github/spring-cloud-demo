@@ -3,9 +3,9 @@ spring:
     name: application-order
     datasource:
       druid:
-        url: jdbc:mysql://rm-bp131820s97mp89aooo.mysql.rds.aliyuncs.com:3306/wowoshenghuo_mba?useUnicode=true&characterEncoding=utf8&useSSL=true
-        username: wowoshenghuo_mba
-        password: wowoshenghuo_mba
+        url: 
+        username: 
+        password: 
         max-wait: 30000
         initial-size: 50
         min-idle: 50
@@ -15,9 +15,9 @@ spring:
   order:
     datasource:
       druid:
-        url: jdbc:mysql://rm-bp131820s97mp89aooo.mysql.rds.aliyuncs.com:3306/wowoshenghuo_order?useUnicode=true&characterEncoding=utf8&useSSL=true
-        username: wowoshenghuo_order
-        password: wowoshenghuo_order
+        url: 
+        username: 
+        password: 
         max-wait: 30000
         initial-size: 50
         min-idle: 50
