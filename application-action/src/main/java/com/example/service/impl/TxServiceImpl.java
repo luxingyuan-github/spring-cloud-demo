@@ -82,7 +82,7 @@ public class TxServiceImpl implements TxService {
         Map<String,Object> updateStatusMap = ImmutableMap.<String,Object>builder()
                 .put("product_id",tOrder.getProduct_id())
                 .build();
-        updateStatusRequestData.setRequestBody(updateStatusRequestData);
+        updateStatusRequestData.setRequestBody(updateStatusMap);
         this.orderFeign.updateStatus(updateStatusRequestData);
     }
 
