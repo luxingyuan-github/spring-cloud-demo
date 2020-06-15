@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
+import java.util.Random;
 
 @Service
 public class TOrderServiceImpl implements TOrderService {
@@ -24,8 +25,13 @@ public class TOrderServiceImpl implements TOrderService {
     }
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void updateStatus(Map<String,Object> map){
+    public void updateStatus(Map<String,Object> map) throws Exception {
         System.out.println("[TOrderServiceImpl updateStatus] 当前 XID: {}"+ RootContext.getXID());
+        Random rm = new Random();
+        int random = rm.nextInt(100)+1;
+        if(random % 2 == 0){
+            throw new Exception("随机异常");
+        }
         this.tOrderInfoMapper.updateStatus(map);
     }
 }

@@ -35,7 +35,6 @@ public class TxServiceImpl implements TxService {
 
     @Override
     @GlobalTransactional(rollbackFor = Exception.class)
-//    @Transactional(rollbackFor =  Exception.class)
     public void createOrder() throws Exception{
 
         System.out.println("[reduceBalance] 当前 XID: {}"+ RootContext.getXID());
@@ -45,8 +44,8 @@ public class TxServiceImpl implements TxService {
         tOrder.setId(null);
         tOrder.setUser_id(1L);
         tOrder.setProduct_id(1L);
-        tOrder.setCount(2);
-        tOrder.setMoney(new BigDecimal(10));
+        tOrder.setCount(1);
+        tOrder.setMoney(new BigDecimal(1));
         tOrder.setStatus(0);
 
 
@@ -76,7 +75,6 @@ public class TxServiceImpl implements TxService {
         this.accountFeign.decrease(accountRequestData);
 
 
-        Thread.sleep(15000);
         System.out.println("------修改订单状态-----");
         RequestData updateStatusRequestData = new RequestData();
         Map<String,Object> updateStatusMap = ImmutableMap.<String,Object>builder()

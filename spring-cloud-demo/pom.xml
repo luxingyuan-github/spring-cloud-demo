@@ -9,7 +9,6 @@
         <module>../application-common</module>
         <module>../application-order</module>
         <module>../application-action</module>
-        <module>../application-tm</module>
         <module>../application-admin-server</module>
         <module>../application-storage</module>
     </modules>
@@ -67,7 +66,7 @@
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-all</artifactId>
-            <version>1.2.0</version>
+            <version>${seata.version}</version>
         </dependency>
 
         <!-- 分布式事务支持 -->
