@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: application-action
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: ${spring.application.name}-group
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:3333/eureka/
+
+logging:
+  level:
+    com.example: debug
+
+server:
+  port: 7777
+
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}-application
+  tx-service-group: my_test_tx_group
+  service:
+    grouplist:
+      default: 127.0.0.1:8091
+    vgroup-mapping:
+      my_test_tx_group: default
+  enable-auto-data-source-proxy: false

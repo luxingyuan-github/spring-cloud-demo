@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: application-admin-server
+server:
+  port: 7179
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    health-check-url-path: /actuator/health
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:3333/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

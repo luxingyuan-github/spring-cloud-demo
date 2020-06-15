@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: application-storage
+    datasource:
+      druid:
+        url: jdbc:mysql://127.0.0.1:3306/tx_user?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=UTC
+        username: root
+        password: 123456
+        max-wait: 1
+        initial-size: 8
+        min-idle: 8
+        max-active: 8
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  order:
+    datasource:
+      druid:
+        url: jdbc:mysql://127.0.0.1:3306/tx_order?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=UTC
+        username: root
+        password: 123456
+        max-wait: 1
+        initial-size: 8
+        min-idle: 8
+        max-active: 8
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  storage:
+    datasource:
+      druid:
+        url: jdbc:mysql://127.0.0.1:3306/tx_storage?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=UTC
+        username: root
+        password: 123456
+        max-wait: 1
+        initial-size: 8
+        min-idle: 8
+        max-active: 8
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: ${spring.application.name}-group
+
+server:
+  port: 7179
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:3333/eureka/
+
+logging:
+  level:
+    com.example: debug
+
+
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}-application
+  tx-service-group: my_test_tx_group
+  service:
+    grouplist:
+      default: 127.0.0.1:8091
+    vgroup-mapping:
+      my_test_tx_group: default
