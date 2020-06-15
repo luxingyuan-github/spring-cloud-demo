@@ -68,3 +68,4 @@ seata:
       default: 127.0.0.1:8091
     vgroup-mapping:
       my_test_tx_group: default
+  enable-auto-data-source-proxy: false

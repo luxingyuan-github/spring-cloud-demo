@@ -39,7 +39,7 @@ public class TxServiceImpl implements TxService {
 
         System.out.println("[reduceBalance] 当前 XID: {}"+ RootContext.getXID());
 
-        System.out.println("-------下单开始---------");
+
         TOrder tOrder = new TOrder();
         tOrder.setId(null);
         tOrder.setUser_id(1L);
@@ -48,15 +48,13 @@ public class TxServiceImpl implements TxService {
         tOrder.setMoney(new BigDecimal(1));
         tOrder.setStatus(0);
 
-
+        System.out.println("-------下单开始---------");
         RequestData orderRequestData = new RequestData();
         Map<String,Object> orderMap = BaseUtil.objectToMap(tOrder);
         orderRequestData.setRequestBody(orderMap);
         this.orderFeign.saveOrder(orderRequestData);
 
-
         System.out.println("-------减库存开始---------");
-
         RequestData storageRequestData = new RequestData();
         Map<String,Object> storageMap = ImmutableMap.<String,Object>builder()
                 .put("count",tOrder.getCount())
