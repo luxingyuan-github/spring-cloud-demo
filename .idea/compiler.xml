@@ -6,21 +6,42 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="application-dao" />
-        <module name="application-mba" />
-        <module name="application-order" />
         <module name="application-service" />
+        <module name="application-action" />
+        <module name="application-order" />
+        <module name="application-storage" />
         <module name="eureka" />
+        <module name="application-util" />
+        <module name="application-dao" />
+        <module name="application-admin-server" />
+        <module name="application-mba" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="application-action" target="1.8" />
+      <module name="application-admin-server" target="1.8" />
       <module name="application-common" target="1.8" />
       <module name="application-dao" target="1.8" />
       <module name="application-mba" target="1.8" />
       <module name="application-order" target="1.8" />
       <module name="application-service" target="1.8" />
+      <module name="application-storage" target="1.8" />
+      <module name="application-util" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="spring-cloud-demo" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="application-action" options="-parameters" />
+      <module name="application-admin-server" options="-parameters" />
+      <module name="application-dao" options="-parameters" />
+      <module name="application-mba" options="-parameters" />
+      <module name="application-order" options="-parameters" />
+      <module name="application-service" options="-parameters" />
+      <module name="application-storage" options="-parameters" />
+      <module name="application-util" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+    </option>
   </component>
 </project>

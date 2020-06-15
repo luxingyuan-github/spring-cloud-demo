@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../application-common/application-common.iml" filepath="$PROJECT_DIR$/../application-common/application-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../application-common/application-dao/application-dao.iml" filepath="$PROJECT_DIR$/../application-common/application-dao/application-dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../application-mba/application-mba.iml" filepath="$PROJECT_DIR$/../application-mba/application-mba.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../application-order/application-order.iml" filepath="$PROJECT_DIR$/../application-order/application-order.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../application-common/application-service/application-service.iml" filepath="$PROJECT_DIR$/../application-common/application-service/application-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../eureka/eureka.iml" filepath="$PROJECT_DIR$/../eureka/eureka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo.iml" filepath="$PROJECT_DIR$/spring-cloud-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-action/application-action.iml" filepath="$PROJECT_DIR$/application-action/application-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-admin-server/application-admin-server.iml" filepath="$PROJECT_DIR$/application-admin-server/application-admin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-common/application-common.iml" filepath="$PROJECT_DIR$/application-common/application-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-common/application-dao/application-dao.iml" filepath="$PROJECT_DIR$/application-common/application-dao/application-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-mba/application-mba.iml" filepath="$PROJECT_DIR$/application-mba/application-mba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-order/application-order.iml" filepath="$PROJECT_DIR$/application-order/application-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-common/application-service/application-service.iml" filepath="$PROJECT_DIR$/application-common/application-service/application-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-storage/application-storage.iml" filepath="$PROJECT_DIR$/application-storage/application-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application-common/application-util/application-util.iml" filepath="$PROJECT_DIR$/application-common/application-util/application-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo/spring-cloud-demo.iml" filepath="$PROJECT_DIR$/spring-cloud-demo/spring-cloud-demo.iml" />
     </modules>
   </component>
 </project>
