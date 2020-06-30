@@ -7,6 +7,16 @@ spring:
         tx-service-group: ${spring.application.name}-group
 
 
+feign:
+  httpclient:
+    connection-timeout: 5000
+    connection-timer-repeat: 5000
+
+ribbon:
+  ConnectTimeout: 5000
+  ReadTimeout: 5000
+
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -14,6 +24,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:3333/eureka/
+
+
+
 
 logging:
   level:
@@ -33,3 +46,4 @@ seata:
     vgroup-mapping:
       my_test_tx_group: default
   enable-auto-data-source-proxy: false
+

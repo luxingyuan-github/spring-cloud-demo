@@ -53,6 +53,18 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:3333/eureka/
 
+
+feign:
+  httpclient:
+    connection-timeout: 5000
+    connection-timer-repeat: 5000
+
+ribbon:
+  ConnectTimeout: 5000
+  ReadTimeout: 5000
+  eureka:
+    enabled: true
+
 logging:
   level:
     com.example: debug
